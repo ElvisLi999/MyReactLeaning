@@ -8,7 +8,7 @@ const ExpenseItem = (props) => {
     // const clickHandler = () => {
     //     console.log('Clicked!');
     // };
-    const [title, setTitle] = useState(props.title);
+    const [title, setTitle] = useState(props.title); // State
 
     return (
         <Card className='expense-item'>
