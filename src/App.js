@@ -11,13 +11,18 @@ const App = () => {
     {id: 'e4', title: 'New Desk (Wooden)', amount: 359.99, date: new Date(2021, 5, 12)},
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   //{}:object that sets all the attributes
   //Third and more agruments: contents(elements) inside
   return React.createElement(
     'div',
     {},
     // React.createElement('h2', {},'Let\'s get started!'),
-    React.createElement(NewExpense,{}),
+    React.createElement(NewExpense,{onAddExpense: addExpenseHandler}),
     React.createElement(Expenses, {items: expenses})
     );
 
